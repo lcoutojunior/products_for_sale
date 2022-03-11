@@ -19,5 +19,13 @@ routes.post('/shoes', async (req, res) => {
     return await ShoeController.createShoe(req, res);    
 });
 
+routes.put('/shoes', async (req, res) => {
+    return await ShoeController.updateShoe(req, res);    
+});
+
+routes.delete('/shoes/:uuid', async (req, res) => {
+    return await ShoeController.deleteShoe(req, res);    
+});
+
 export default routes;
 
