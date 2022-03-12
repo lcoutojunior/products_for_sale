@@ -5,6 +5,8 @@ export default class Product {
     @IsUUID(4)
     public uuid: string;
     @IsString()
+    private internal_code: string;
+    @IsString()
     private name: string;
     @IsString()
     private brand: string;
@@ -25,6 +27,7 @@ export default class Product {
 
 
     constructor(
+        internal_code: string,
         name: string,
         brand: string, 
         currency: string, 
@@ -37,6 +40,7 @@ export default class Product {
     ) {
 
         this.uuid = uuidv4();
+        this.internal_code = internal_code;
         this.name = name;
         this.brand = brand;
         this.currency = currency;

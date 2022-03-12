@@ -3,6 +3,7 @@ import { Knex } from "knex";
 export async function up(knex: Knex): Promise<void> {
     await knex('shoes').insert({
             uuid: "032f99a1-b70d-4e2b-a5bf-07002f550a0f",
+            internal_code: "0",
             name: "Nike Shox R4",
             brand: "Nike",
             currency: "R$",
@@ -22,6 +23,6 @@ export async function up(knex: Knex): Promise<void> {
 
 
 export async function down(knex: Knex): Promise<void> {
-    await knex('shoes').where("uuid", "032f99a1-b70d-4e2b-a5bf-07002f550a0f").delete();
+    await knex('shoes').where("internal_code", "0").delete();
 }
 

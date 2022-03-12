@@ -3,6 +3,7 @@ import { Knex } from "knex";
 export async function up(knex: Knex): Promise<void> {
         return await knex.schema.createTable("shoes", async function (table) {
           table.uuid("uuid").primary().notNullable();
+          table.string("internal_code").unique().notNullable();
           table.string("name").notNullable();
           table.string("brand").notNullable();
           table.string("currency").notNullable();
@@ -17,8 +18,8 @@ export async function up(knex: Knex): Promise<void> {
           table.string("locking_type").notNullable();
           table.string("sole_type").notNullable();
           table.integer("colors_qty").notNullable();
-          table.timestamp("created_dt").notNullable().defaultTo(knex.fn.now());
-          table.timestamp("updated_dt").notNullable().defaultTo(knex.fn.now());
+          table.timestamp("created_at").notNullable().defaultTo(knex.raw("CURRENT_TIMESTAMP"));
+          table.timestamp("updated_at").notNullable().defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
         });
 }
 

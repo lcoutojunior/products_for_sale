@@ -15,6 +15,7 @@ export default class Shoe extends Product {
     private colors_qty: string;
 
     constructor(
+        internal_code : string,
         name: string,
         brand: string, 
         currency: string, 
@@ -32,7 +33,7 @@ export default class Shoe extends Product {
 
 
     ) {
-        super(name, brand, currency, previous_price, current_price, installments, installment_price, rating, reviews);
+        super(internal_code, name, brand, currency, previous_price, current_price, installments, installment_price, rating, reviews);
         
         this.gender = gender;
         this.available_qty = available_qty;

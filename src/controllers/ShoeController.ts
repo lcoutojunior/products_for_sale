@@ -7,6 +7,7 @@ export default class ShoeController {
 
     private static extractShoe(req: any): Shoe {
         let shoe = new Shoe(
+            req.body.internal_code,
             req.body.name,
             req.body.brand,
             req.body.currency,
@@ -28,8 +29,8 @@ export default class ShoeController {
 
     public static async getShoes(req: any, res: any) {
         try {
-            let serv = await ShoeService.getShoes();
-            return res.status(200).json(serv);
+            let shoeService = await ShoeService.getShoes();
+            return res.status(200).json({ "shoes": shoeService });
         } catch (e: unknown) {
             if (e instanceof Error) {
                 return res.status(400).json(e.message);
@@ -43,11 +44,15 @@ export default class ShoeController {
         try {
 
             let uuid = req.params.uuid
-            if (checkIfValidUUID(uuid)) {
-                let serv = await ShoeService.getShoe(uuid);
-                return res.status(200).json(serv);
-            } else {
+            if (!checkIfValidUUID(uuid)) {
                 return res.status(404).json("invalid uuidv4");
+            }
+
+            let shoe = await ShoeService.getShoe(uuid);
+            if (shoe.length > 0) {
+                return res.status(200).json({ "shoe": shoe });
+            } else {
+                return res.status(404).json({ "shoe": "not found" })
             }
 
         } catch (e: unknown) {
@@ -85,13 +90,19 @@ export default class ShoeController {
         try {
 
             let shoe = this.extractShoe(req);
+            //Keeps the original uuid.
             shoe.uuid = req.body.uuid;
 
             const errors: ValidationError[] = await validate(shoe);
             if (errors.length > 0) {
                 res.status(403).json(errors);
+            }
+
+            shoe = await ShoeService.updateShoe(shoe);        
+            if (shoe) {
+                res.status(200).json({ "updated": shoe });
             } else {
-                return res.status(200).json(await ShoeService.updateShoe(shoe));
+                res.status(404).json({ "updated": "shoe not found" });
             }
 
         } catch (e: unknown) {
@@ -106,12 +117,18 @@ export default class ShoeController {
 
     public static async deleteShoe(req: any, res: any) {
         try {
-            if (checkIfValidUUID(req.params.uuid)){
-                let serv = await ShoeService.deleteShoe(req.params.uuid);
-                res.status(200).json(serv);
-            } else {
+            if (!checkIfValidUUID(req.params.uuid)) {
                 res.status(404).json("invalid uuidv4")
             }
+            
+            let shoe = await ShoeService.deleteShoe(req.params.uuid);
+            
+            if(shoe){
+                res.status(200).json({"deleted": shoe});
+            }else{
+                res.status(404).json({"deleted": "shoe not found"});
+            }
+            
 
         } catch (e: unknown) {
 
