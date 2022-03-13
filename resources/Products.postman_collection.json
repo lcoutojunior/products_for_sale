@@ -1,0 +1,862 @@
+{
+	"info": {
+		"_postman_id": "719f741a-e6dd-4f33-9b30-dad0e15fa3b5",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/healthcheck",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HealthCheck",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/healthcheck",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6-uBnwlsJiQ3kuZAgKKWB4aV5ugdE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:39:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"pong\""
+				}
+			]
+		},
+		{
+			"name": "Shoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/shoes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"shoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Empty",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-A3fNKQjVT5GlTiTw/pB7y/zjKRU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:39:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shoes\": []\n}"
+				},
+				{
+					"name": "Read All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"453-z4ZdCOrauwgU99B2SUFpkwEMTjM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:50:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shoes\": [\n        {\n            \"uuid\": \"2afcbd5b-a512-46c6-803e-b69999fc948a\",\n            \"internal_code\": \"1\",\n            \"name\": \"Nike Shox 4\",\n            \"brand\": \"Nike\",\n            \"currency\": \"R$\",\n            \"previous_price\": \"7,4999\",\n            \"current_price\": \"529,9\",\n            \"installments\": 12,\n            \"installment_price\": \"44,17\",\n            \"rating\": 4.5,\n            \"reviews\": 540,\n            \"gender\": \"Masculino\",\n            \"available_qty\": 100,\n            \"locking_type\": \"Cadarço\",\n            \"sole_type\": \"Borracha\",\n            \"colors_qty\": 9,\n            \"current_usd_price\": \"98,21331912674862\",\n            \"current_eur_price\": \"83,24586124042827\",\n            \"current_inr_price\": \"7317,687089982874\",\n            \"created_at\": \"2022-03-13T05:49:39.000Z\",\n            \"updated_at\": \"2022-03-13T05:49:39.000Z\"\n        },\n        {\n            \"uuid\": \"5985869b-b1ff-491f-bcc6-94c44fd22903\",\n            \"internal_code\": \"0\",\n            \"name\": \"Nike Shox 4\",\n            \"brand\": \"Nike\",\n            \"currency\": \"R$\",\n            \"previous_price\": \"7,4999\",\n            \"current_price\": \"529,9\",\n            \"installments\": 12,\n            \"installment_price\": \"44,17\",\n            \"rating\": 4.5,\n            \"reviews\": 540,\n            \"gender\": \"Masculino\",\n            \"available_qty\": 100,\n            \"locking_type\": \"Cadarço\",\n            \"sole_type\": \"Borracha\",\n            \"colors_qty\": 9,\n            \"current_usd_price\": \"98,21331912674862\",\n            \"current_eur_price\": \"83,24586124042827\",\n            \"current_inr_price\": \"7317,687089982874\",\n            \"created_at\": \"2022-03-13T05:48:58.000Z\",\n            \"updated_at\": \"2022-03-13T05:48:58.000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Shoe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/shoes/c2ee19b1-089f-4cf8-8fcc-f3a83f07fd46",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"shoes",
+						"c2ee19b1-089f-4cf8-8fcc-f3a83f07fd46"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes/c2ee19b1-089f-4cf8-8fcc-f3a83f07fd46",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes",
+								"c2ee19b1-089f-4cf8-8fcc-f3a83f07fd46"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14-Z9wjN87+csOpDcAG338mFCeBa30\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:39:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shoe\": \"not found\"\n}"
+				},
+				{
+					"name": "Invalid uuidv4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes/c2ee19b1-089f-4cf8-8fcc-f3a83f07fd4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes",
+								"c2ee19b1-089f-4cf8-8fcc-f3a83f07fd4"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-foESyorryRMGZDksFl/sEV4x5zI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:40:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "\"invalid uuidv4\""
+				}
+			]
+		},
+		{
+			"name": "Shoe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"internal_code\": \"13\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"7,4999\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/shoes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"shoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Incorrect Brazilian Prices",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"internal_code\": \"0\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"7.4999\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44.17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6e-dcJwMyX2OwY/+bZebW9G0lRczoM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:48:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"installment_price\": \"not correct in brazilians price\"\n    },\n    {\n        \"previous_price\": \"not correct in brazilians price\"\n    }\n]"
+				},
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"internal_code\": \"0\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "547"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"223-P00h1GzOO4bNPE5feuguxdvfUEA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 14:49:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uuid\": \"ae26cbf9-95c2-4413-be85-ec1d2dd08db5\",\n    \"internal_code\": \"0\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9,\n    \"current_usd_price\": \"98,21331912674862\",\n    \"current_eur_price\": \"83,24586124042827\",\n    \"current_inr_price\": \"7317,687089982874\",\n    \"created_at\": \"2022-03-13T14:49:12.000Z\",\n    \"updated_at\": \"2022-03-13T14:49:12.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Shoe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uuid\": \"2afcbd5b-a512-46c6-803e-b69999fc948a\",\n    \"internal_code\": \"0\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/shoes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"shoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"62ed5c39-0b18-4890-b7e9-8b8689169d3a\",\n    \"internal_code\": \"0\",\n    \"name\": \"Sapato preto\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-6EydCRMVFoZyRYVNVTxsfWuHszQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:40:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"updated\": \"shoe not found\"\n}"
+				},
+				{
+					"name": "Invalid uuidv4",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"5985869b-b1ff-491f-bcc6-94c44fd22903\",\n    \"internal_code\": \"0\",\n    \"name\": \"Nike Shox 4\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "414"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19e-027cFNt16ReeOL0AMkQygbOU1MQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:42:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"target\": {\n            \"uuid\": \"\",\n            \"internal_code\": \"0\",\n            \"name\": \"Nike Shox 4\",\n            \"brand\": \"Nike\",\n            \"currency\": \"R$\",\n            \"previous_price\": \"749,99\",\n            \"current_price\": \"529,9\",\n            \"installments\": 12,\n            \"installment_price\": \"44,17\",\n            \"rating\": 4.5,\n            \"reviews\": 540,\n            \"gender\": \"Masculino\",\n            \"available_qty\": 100,\n            \"locking_type\": \"Cadarço\",\n            \"sole_type\": \"Borracha\",\n            \"colors_qty\": 9\n        },\n        \"value\": \"\",\n        \"property\": \"uuid\",\n        \"children\": [],\n        \"constraints\": {\n            \"isUuid\": \"uuid must be a UUID\"\n        }\n    }\n]"
+				},
+				{
+					"name": "Updated",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"5985869b-b1ff-491f-bcc6-94c44fd22903\",\n    \"internal_code\": \"4\",\n    \"name\": \"Nike Shox 5\",\n    \"brand\": \"Nike\",\n    \"currency\": \"R$\",\n    \"previous_price\": \"749,99\",\n    \"current_price\": \"529,9\",\n    \"installments\": 12,\n    \"installment_price\": \"44,17\",\n    \"rating\": 4.5,\n    \"reviews\": 540,\n    \"gender\": \"Masculino\",\n    \"available_qty\": 100,\n    \"locking_type\": \"Cadarço\",\n    \"sole_type\": \"Borracha\",\n    \"colors_qty\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/shoes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "559"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22f-Ujgz++61Ik2InIdZix1tvpRkiaQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:52:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"updated\": {\n        \"uuid\": \"5985869b-b1ff-491f-bcc6-94c44fd22903\",\n        \"internal_code\": \"4\",\n        \"name\": \"Nike Shox 5\",\n        \"brand\": \"Nike\",\n        \"currency\": \"R$\",\n        \"previous_price\": \"749,99\",\n        \"current_price\": \"529,9\",\n        \"installments\": 12,\n        \"installment_price\": \"44,17\",\n        \"rating\": 4.5,\n        \"reviews\": 540,\n        \"gender\": \"Masculino\",\n        \"available_qty\": 100,\n        \"locking_type\": \"Cadarço\",\n        \"sole_type\": \"Borracha\",\n        \"colors_qty\": 9,\n        \"current_usd_price\": \"98,21331912674862\",\n        \"current_eur_price\": \"83,24586124042827\",\n        \"current_inr_price\": \"7317,687089982874\",\n        \"created_at\": \"2022-03-13T05:48:58.000Z\",\n        \"updated_at\": \"2022-03-13T05:52:18.000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Shoe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/shoes/44ed6e3b-bc94-4e03-92d7-f567ae7c302e",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"shoes",
+						"44ed6e3b-bc94-4e03-92d7-f567ae7c302e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes/62ed5c39-0b18-4890-b7e9-8b8689169d3a",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes",
+								"62ed5c39-0b18-4890-b7e9-8b8689169d3a"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-Va6/pdpBMPyDl3RmtQ0YCb7EYYQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:44:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deleted\": \"shoe not found\"\n}"
+				},
+				{
+					"name": "Invalid uuidv4",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes/d3e1d71a-3579-45aa-90c7-6bc0c362fbe",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes",
+								"d3e1d71a-3579-45aa-90c7-6bc0c362fbe"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-foESyorryRMGZDksFl/sEV4x5zI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:46:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"invalid uuidv4\""
+				},
+				{
+					"name": "Deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/shoes/d3e1d71a-3579-45aa-90c7-6bc0c362fbef",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"shoes",
+								"d3e1d71a-3579-45aa-90c7-6bc0c362fbef"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d-n0Q9zHCEPrOZBWgc9bwZMnFY4Bo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Mar 2022 05:46:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deleted\": 1\n}"
+				}
+			]
+		}
+	]
+}

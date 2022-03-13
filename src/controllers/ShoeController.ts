@@ -45,7 +45,7 @@ export default class ShoeController {
 
             let uuid = req.params.uuid
             if (!checkIfValidUUID(uuid)) {
-                return res.status(404).json("invalid uuidv4");
+                return res.status(400).json("invalid uuidv4");
             }
 
 
@@ -121,7 +121,7 @@ export default class ShoeController {
     public static async deleteShoe(req: any, res: any) {
         try {
             if (!checkIfValidUUID(req.params.uuid)) {
-                return res.status(404).json("invalid uuidv4")
+                return res.status(400).json("invalid uuidv4")
             }
 
             let shoe = await ShoeService.deleteShoe(req.params.uuid);
