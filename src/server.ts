@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 
 app.use(routes);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server running on port ${process.env.PORT}`);
+let port = process.env.port || 3000;
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
 
 export default app;
