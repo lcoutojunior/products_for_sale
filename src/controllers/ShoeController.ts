@@ -48,10 +48,13 @@ export default class ShoeController {
                 return res.status(404).json("invalid uuidv4");
             }
 
+
             let shoe = await ShoeService.getShoe(uuid);
-            if (shoe.length > 0) {
+            if (shoe) {
+
                 return res.status(200).json({ "shoe": shoe });
             } else {
+
                 return res.status(404).json({ "shoe": "not found" })
             }
 
@@ -95,14 +98,14 @@ export default class ShoeController {
 
             const errors: ValidationError[] = await validate(shoe);
             if (errors.length > 0) {
-                res.status(403).json(errors);
+                return res.status(403).json(errors);
             }
 
-            shoe = await ShoeService.updateShoe(shoe);        
-            if (shoe) {
-                res.status(200).json({ "updated": shoe });
+            let shoeUpdated = await ShoeService.updateShoe(shoe);
+            if (shoeUpdated) {
+                return res.status(200).json({ "updated": shoeUpdated });
             } else {
-                res.status(404).json({ "updated": "shoe not found" });
+                return res.status(404).json({ "updated": "shoe not found" });
             }
 
         } catch (e: unknown) {
@@ -118,17 +121,17 @@ export default class ShoeController {
     public static async deleteShoe(req: any, res: any) {
         try {
             if (!checkIfValidUUID(req.params.uuid)) {
-                res.status(404).json("invalid uuidv4")
+                return res.status(404).json("invalid uuidv4")
             }
-            
+
             let shoe = await ShoeService.deleteShoe(req.params.uuid);
-            
-            if(shoe){
-                res.status(200).json({"deleted": shoe});
-            }else{
-                res.status(404).json({"deleted": "shoe not found"});
+
+            if (shoe) {
+                return res.status(200).json({ "deleted": shoe });
+            } else {
+                return res.status(404).json({ "deleted": "shoe not found" });
             }
-            
+
 
         } catch (e: unknown) {
 

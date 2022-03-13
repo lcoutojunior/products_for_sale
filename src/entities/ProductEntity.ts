@@ -5,11 +5,11 @@ export default class Product {
     @IsUUID(4)
     public uuid: string;
     @IsString()
-    private internal_code: string;
+    public internal_code: string;
     @IsString()
-    private name: string;
+    public name: string;
     @IsString()
-    private brand: string;
+    public brand: string;
     @IsString()
     public currency: string;
     @IsString()
@@ -17,25 +17,24 @@ export default class Product {
     @IsString()
     public current_price: string;
     @IsNumber()
-    private installments: number;
+    public installments: number;
     @IsString()
     public installment_price: string;
     @IsNumber()
-    private rating: number;
+    public rating: number;
     @IsNumber()
-    private reviews: number;
-
+    public reviews: number;
 
     constructor(
         internal_code: string,
         name: string,
-        brand: string, 
-        currency: string, 
-        previous_price: string, 
-        current_price: string, 
-        installments: number, 
-        installment_price: string, 
-        rating: number, 
+        brand: string,
+        currency: string,
+        previous_price: string,
+        current_price: string,
+        installments: number,
+        installment_price: string,
+        rating: number,
         reviews: number
     ) {
 
@@ -51,5 +50,5 @@ export default class Product {
         this.rating = rating;
         this.reviews = reviews;
     }
-    
+
 }
