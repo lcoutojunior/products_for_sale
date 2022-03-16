@@ -40,7 +40,7 @@ Just clone or download the project.
   cd products_for_sale
   npm install 
   create a local MySQL Database.
-  npm run knex:latest
+  npm run knex migrate:latest
   import Collection to postman from ./resources
   import Environment Variable to postman from ./resources
 ```
